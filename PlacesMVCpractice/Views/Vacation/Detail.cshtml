@@ -1,0 +1,19 @@
+﻿@model PlacesMVCpractice.Models.Vacation
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<div class="detailDisplay">
+    <H1> @Model.PlaceName</H1>
+    <div class="product-data">
+        <p class="title">@Model.PlaceName</p>
+        <p class="description">@Model.Description</p>
+    </div>
+    <a href="@Url.Action("Detail", "Vacation", new { id = Model.Id })">
+        <img src="@Url.Content("~/Content/" + Model.ImageName)" style="width:500px;height:auto" />
+    </a>
+
+    
+</div>

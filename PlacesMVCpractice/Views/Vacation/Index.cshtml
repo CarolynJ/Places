@@ -1,0 +1,30 @@
+﻿@model List<PlacesMVCpractice.Models.Vacation> 
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Here are several vacation options</h1>
+<p></p>
+               <div class="vacations">
+                   @foreach (var vacation in Model)
+                   {
+                       <div class="listing">
+                          
+                               <p> Option @vacation.Id </p>
+                           <div class="product-data">
+                               <p class="title">@vacation.PlaceName</p>
+                             
+                           </div>
+                               <a href="@Url.Action("Detail", "Vacation", new { id = vacation.Id })">
+                                   <img src="@Url.Content("~/Content/" + vacation.ImageName)" style="width:250px;height:auto"/>
+                               </a>
+                          
+                         
+
+
+                       </div>
+                   }
+               </div>
+
+
