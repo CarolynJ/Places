@@ -11,13 +11,13 @@
                    {
                        <div class="listing">
                           
-                               <p> Option @vacation.Id </p>
+                               @*<H3> Option @vacation.Id </H3> *@
                            <div class="product-data">
-                               <p class="title">@vacation.PlaceName</p>
+                               <H3 class="title">@vacation.PlaceName</H3>
                              
                            </div>
                                <a href="@Url.Action("Detail", "Vacation", new { id = vacation.Id })">
-                                   <img src="@Url.Content("~/Content/" + vacation.ImageName)" style="width:250px;height:auto"/>
+                                   <img src="@Url.Content("~/Content/" + vacation.ImageName)" class="image"/>
                                </a>
                           
                          

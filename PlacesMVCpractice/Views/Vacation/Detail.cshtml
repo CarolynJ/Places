@@ -4,15 +4,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Detail</h2>
+<h2>Detail Page</h2>
 <div class="detailDisplay">
     <H1> @Model.PlaceName</H1>
     <div class="product-data">
-        <p class="title">@Model.PlaceName</p>
-        <p class="description">@Model.Description</p>
+        
+        <H2 class="description">@Model.Description</H2>
     </div>
     <a href="@Url.Action("Detail", "Vacation", new { id = Model.Id })">
-        <img src="@Url.Content("~/Content/" + Model.ImageName)" style="width:500px;height:auto" />
+        <img id="detailImage"src="@Url.Content("~/Content/" + Model.ImageName)" width="500" align="middle"/>
     </a>
 
     
