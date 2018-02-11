@@ -11,20 +11,23 @@
                    {
                        <div class="listing">
                           
-                               @*<H3> Option @vacation.Id </H3> *@
                            <div class="product-data">
-                               <H3 class="title">@vacation.PlaceName</H3>
-                             
+                               <H3 class="title">@vacation.PlaceName</H3> 
                            </div>
                                <a href="@Url.Action("Detail", "Vacation", new { id = vacation.Id })">
                                    <img src="@Url.Content("~/Content/" + vacation.ImageName)" class="image"/>
                                </a>
-                          
-                         
-
-
+                           @using (Html.BeginForm("NewPost", "Forum", FormMethod.Post))
+                           {
+                               <div class="form-field">
+                                   @Html.RadioButton("vote", @vacation.PlaceName)
+                               </div>
+                           } 
+ 
                        </div>
+                  
                    }
                </div>
+<button type="submit">Submit!</button>
 
 

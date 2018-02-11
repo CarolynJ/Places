@@ -12,8 +12,6 @@ namespace PlacesMVCpractice.Controllers
     {
         private readonly VacationSqlDAL vacationDal;
 
-       
-
         // GET: Vacation
         public ActionResult Index()
         {
@@ -26,7 +24,7 @@ namespace PlacesMVCpractice.Controllers
         // GET: Store/Detail/id
         public ActionResult Detail(int id)
         {
-            // Check to make sure that the id is for a valid product
+          
             VacationSqlDAL vacationDal = new VacationSqlDAL();
             var vacation = vacationDal.GetDetail(id);
             if (vacation == null)

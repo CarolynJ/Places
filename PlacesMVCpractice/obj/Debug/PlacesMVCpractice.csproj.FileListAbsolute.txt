@@ -65,3 +65,9 @@
 \\mac\home\documents\visual studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\obj\Debug\PlacesMVCpractice.csprojResolveAssemblyReference.cache
 \\mac\home\documents\visual studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\obj\Debug\PlacesMVCpractice.dll
 \\mac\home\documents\visual studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\obj\Debug\PlacesMVCpractice.pdb
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Net.Http.Formatting.dll
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Web.Http.dll
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Web.Http.WebHost.dll
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Net.Http.Formatting.xml
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Web.Http.xml
+\\Mac\Home\Documents\Visual Studio 2017\Projects\PlacesMVCpractice\PlacesMVCpractice\bin\System.Web.Http.WebHost.xml

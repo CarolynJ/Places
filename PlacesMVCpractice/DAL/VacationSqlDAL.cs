@@ -9,7 +9,7 @@ namespace PlacesMVCpractice.DAL
 {
     public class VacationSqlDAL
     {
-        private string connectionString = @"Data Source=.\sqlexpress;Initial Catalog=vacation;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=.\sqlexpress;Initial Catalog=vacation;Integrated Security=True";
 
         public Vacation GetDetail(int id)
         {
@@ -20,11 +20,10 @@ namespace PlacesMVCpractice.DAL
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    String SqlQuery = "SELECT * FROM places WHERE id = @id";
+                    string SqlQuery = "SELECT * FROM places WHERE id = @id";
                     SqlCommand cmd = new SqlCommand(SqlQuery, conn);
                     cmd.Parameters.AddWithValue("@id", id);
-
-                    
+         
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
@@ -55,10 +54,8 @@ namespace PlacesMVCpractice.DAL
                     while (reader.Read())
                     {
                         outputList.Add(CreateVacation(reader));
-                    }
-                    
+                    } 
                 }
-          
             }
             catch (SqlException e)
             {
