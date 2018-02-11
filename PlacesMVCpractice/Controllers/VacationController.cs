@@ -12,12 +12,7 @@ namespace PlacesMVCpractice.Controllers
     {
         private readonly VacationSqlDAL vacationDal;
 
-        public VacationController() { }
-
-        public VacationController(VacationSqlDAL vacationDal)
-        {
-            this.vacationDal = vacationDal;
-        }
+       
 
         // GET: Vacation
         public ActionResult Index()

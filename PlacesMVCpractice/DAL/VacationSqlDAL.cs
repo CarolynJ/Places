@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace PlacesMVCpractice.DAL
 {
-    public class VacationSqlDAL: IVacationDAL
+    public class VacationSqlDAL
     {
         private string connectionString = @"Data Source=.\sqlexpress;Initial Catalog=vacation;Integrated Security=True";
 
