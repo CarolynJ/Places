@@ -11,17 +11,31 @@ using System.Web.Mvc;
 
 namespace PlacesMVCpractice.Controllers
 {
-    public class UserController : ApiController
+    public class UserController : Controller
     {
         private readonly UsersSqlDAL userDal;
 
-      
+       public ActionResult Input()
+        {
+            return View("Input");
+        }
 
-      
+      public ActionResult Index()
+        {
+            UsersSqlDAL userDal = new UsersSqlDAL();
+            List<User> users = userDal.GetAllUsers();
+            return View("Index", users);
+        }
 
-        [System.Web.Http.HttpPost]
+        public ActionResult NewUser()
+        {
+            return View("Input", new User());
+        }
+
+        [System.Web.Mvc.HttpPost]
         public ActionResult NewUser(User newUser)
         {
+            UsersSqlDAL userDal = new UsersSqlDAL();
             var result = userDal.SaveNewUser(newUser);
 
             return RedirectToAction("Index");

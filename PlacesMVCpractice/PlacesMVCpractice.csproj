@@ -209,7 +209,8 @@
     <Content Include="Views\Vacation\Index.cshtml" />
     <Content Include="Views\Vacation\Detail.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Users\Input.cshtml" />
+    <Content Include="Views\User\Input.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

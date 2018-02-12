@@ -1,0 +1,29 @@
+﻿@model PlacesMVCpractice.Models.User
+@{
+    ViewBag.Title = "Input";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Input</h2>
+
+@using (Html.BeginForm("Input", "User", FormMethod.Post))
+{
+    <h4>Users</h4>
+    <div class="form-group">
+        <div class="form-field">
+            @Html.Label("firstName", "FirstName")
+            @Html.TextBoxFor(M => M.FirstName)
+            </div>
+            <div class="form-field">
+                @Html.Label("preferredVacation", "PreferredVacation")
+                @Html.TextBoxFor(M => M.PreferredVacation)
+            </div> 
+        <button type="submit">
+            @Html.ActionLink("Submit", "Index")
+        </button>
+    
+        </div>
+       
+}
+
+

@@ -13,9 +13,9 @@ namespace PlacesMVCpractice.DAL
         private string SQL_NewUser = "INSERT INTO users VALUES(@firstName, @preferredVacation);";
         private readonly string connectionString = @"Data Source=.\sqlexpress;Initial Catalog=vacation;Integrated Security=True";
 
-        public User GetUser(int UserId)
+        public List<User> GetAllUsers()
         {
-            User output = new User();
+            List<User> output = new List<User>();
 
             try
             {
@@ -23,20 +23,21 @@ namespace PlacesMVCpractice.DAL
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(SQL_GetUsers, conn);
-                    cmd.Parameters.AddWithValue("@userId", UserId);
+                   
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
                     {
-                        output = CreateUser(reader);
+                        output.Add(CreateUser(reader));
                     }
-                    return output;
+                   
                 }
             }
             catch(SqlException e)
             {
                 throw e;
             }
+            return output;
         }
 
         public bool SaveNewUser(User newUser)

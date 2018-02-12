@@ -17,7 +17,7 @@
                                <a href="@Url.Action("Detail", "Vacation", new { id = vacation.Id })">
                                    <img src="@Url.Content("~/Content/" + vacation.ImageName)" class="image"/>
                                </a>
-                           @using (Html.BeginForm("NewPost", "Forum", FormMethod.Post))
+                           @using (Html.BeginForm("Input", "User", FormMethod.Post))
                            {
                                <div class="form-field">
                                    @Html.RadioButton("vote", @vacation.PlaceName)
@@ -30,4 +30,8 @@
                </div>
 <button type="submit">Submit!</button>
 
+<p>Would you like to add a user to our database?</p>
+<form action="@Url.Action("Input", "User")">
+    <input type="submit" value="Add user" />
+</form>
 
